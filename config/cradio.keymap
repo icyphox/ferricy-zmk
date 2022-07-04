@@ -17,7 +17,7 @@
 
 &mt {
   flavor = "tap-preferred";
-  tapping_term_ms = <185>;
+  tapping_term_ms = <165>;
 };
 
 / {
@@ -30,12 +30,19 @@
             tapping-term-ms = <165>;
             bindings = <&kp SQT>, <&kp DQT>;
         };
-        q_esc: tap_dance_0 {
+        q_esc: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
+            label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <165>;
             bindings = <&kp Q>, <&kp ESC>;
+        };
+        scln_eql: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <165>;
+            bindings = <&kp SCLN>, <&kp EQL>;
         };
     };
 
@@ -47,7 +54,7 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                  &q_esc       &kp D         &kp R        &kp W        &kp B         &kp J        &kp F        &kp U           &kp P          &kp SCLN
+                  &q_esc       &kp D         &kp R        &kp W        &kp B         &kp J        &kp F        &kp U           &kp P          &scln_eql
                   &mt LCTRL A  &mt LSHIFT S  &mt LALT H   &mt LGUI T   &kp G         &kp Y        &mt RGUI N   &mt RALT E      &mt RSHIFT O   &mt RCTRL I
                   &kp Z        &kp X         &kp M        &kp C        &kp V         &kp K        &kp L        &kp CMMA        &kp DOT        &kp FSLH
                                                       &kp TAB    &lt NAV SPC         &lt SYM RET  &lt NUM BSPC
