@@ -56,28 +56,28 @@
 
         nav_layer {
             bindings = <
-                &bt BT_CLR   &trans &trans &trans      &ext_power EP_TOG    &trans      &kp LBRC   &kp RBRC &kp LPAR    &kp RPAR
-                &bt BT_SEL 0 &trans &trans &trans      &trans               &kp LEFT    &kp DOWN   &kp UP   &kp RIGHT   &sqt_dqt 
-                &bt BT_SEL 1 &trans &trans &bootloader &reset               &trans      &kp LBKT   &kp RBKT &trans      &trans
-                                           &trans      &trans               &kp ESC     &trans
+                &kp C_VOL_UP &kp C_VOL_DN &trans &trans      &ext_power EP_TOG    &trans      &kp LBRC   &kp RBRC &kp LPAR    &kp RPAR
+                &kp C_BRI_UP &kp C_BRI_DN &trans &trans      &trans               &kp LEFT    &kp DOWN   &kp UP   &kp RIGHT   &sqt_dqt 
+                &trans &trans &bootloader &reset             &trans               &kp LBKT   &kp RBKT &trans      &trans
+                                          &trans      &trans                      &kp ESC     &trans
                 >;
         };
 
         num_layer {
             bindings = <
-                &caps_word &kp N7 &kp N8 &kp N9 &kp ESC               &trans    &trans   &trans &trans    &trans
-                &kp SQT    &kp N4 &kp N5 &kp N6 &kp KP_EQUAL          &trans    &trans   &trans &trans    &trans
-                &kp GRAVE  &kp N1 &kp N2 &kp N3 &kp BSLH              &trans    &trans   &trans &trans    &trans
-                                         &kp N0 &kp KP_MINUS          &trans    &trans
+                &kp GRAVE   &kp N7 &kp N8 &kp N9 &kp ESC               &trans    &trans   &trans &trans    &trans
+                &kp SQT     &kp N4 &kp N5 &kp N6 &kp KP_EQUAL          &trans    &trans   &trans &trans    &trans
+                &caps_word  &kp N1 &kp N2 &kp N3 &kp BSLH              &trans    &trans   &trans &trans    &trans
+                                         &kp N0 &kp KP_MINUS           &trans    &trans
                 >;
        };
 
        sym_layer {
             bindings = <
-                &caps_word &kp AMPS &kp STAR  &kp LPAR  &kp ESC               &trans    &trans        &trans &trans    &trans
+                &kp TILDE  &kp AMPS &kp STAR  &kp LPAR  &kp ESC               &trans    &trans        &trans &trans    &trans
                 &kp DQT    &kp DLLR &kp PRCNT &kp CARET &kp KP_PLUS           &trans    &trans        &trans &trans    &trans
-                &kp TILDE  &kp EXCL &kp AT    &kp HASH  &kp PIPE              &reset    &bootloader   &trans &trans    &trans
-                                             &kp RPAR  &kp UNDER              &trans    &trans
+                &caps_word  &kp EXCL &kp AT    &kp HASH  &kp PIPE             &reset    &bootloader   &trans &trans    &trans
+                                              &kp RPAR  &kp UNDER             &trans    &trans
                 >;
         };
     };
