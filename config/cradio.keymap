@@ -14,6 +14,11 @@
 #define NUM 2
 #define SYM 3
 
+#define bu C_BRI_UP
+#define bd C_BRI_DN
+#define vu C_VOL_UP
+#define vd C_VOL_DN
+
 
 &mt {
   flavor = "tap-preferred";
@@ -54,37 +59,37 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                  &q_esc       &kp D         &kp R        &kp W        &kp B         &kp J        &kp F        &kp U           &kp P          &scln_eql
-                  &mt LCTRL A  &mt LSHIFT S  &mt LALT H   &mt LGUI T   &kp G         &kp Y        &mt RGUI N   &mt RALT E      &mt RSHIFT O   &mt RCTRL I
-                  &kp Z        &kp X         &kp M        &kp C        &kp V         &kp K        &kp L        &kp CMMA        &kp DOT        &kp FSLH
-                                                      &kp TAB    &lt NAV SPC         &lt SYM RET  &lt NUM BSPC
+                  &q_esc       &kp D         &kp R        &kp W        &kp B               &kp J        &kp F        &kp U           &kp P          &scln_eql
+                  &mt LCTRL A  &mt LSHIFT S  &mt LALT H   &mt LGUI T   &kp G               &kp Y        &mt RGUI N   &mt RALT E      &mt RSHIFT O   &mt RCTRL I
+                  &kp Z        &kp X         &kp M        &kp C        &kp V               &kp K        &kp L        &kp CMMA        &kp DOT        &kp FSLH
+                                                      &kp TAB    &lt NAV SPC               &lt SYM RET  &lt NUM BSPC
                 >;
         };
 
         nav_layer {
             bindings = <
-                &kp C_VOL_UP &kp C_VOL_DN &trans &trans      &ext_power EP_TOG    &trans      &kp LBRC   &kp RBRC &kp LPAR    &kp RPAR
-                &kp C_BRI_UP &kp C_BRI_DN &trans &trans      &trans               &kp LEFT    &kp DOWN   &kp UP   &kp RIGHT   &sqt_dqt 
-                &trans &trans &bootloader &reset             &trans               &kp LBKT   &kp RBKT &trans      &trans
-                                          &trans      &trans                      &kp ESC     &trans
+                &kp vd     &kp vu      &trans        &trans       &trans                   &trans      &kp LBRC   &kp RBRC   &kp LPAR    &kp RPAR
+                &kp bd     &kp bu      &trans        &trans       &trans                   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &sqt_dqt
+                &trans     &trans      &bootloader   &reset       &trans                   &trans      &kp LBKT   &kp RBKT   &trans      &trans
+                                                     &trans       &trans                   &kp ESC     &trans
                 >;
         };
 
         num_layer {
             bindings = <
-                &kp GRAVE   &kp N7 &kp N8 &kp N9 &kp ESC               &trans    &trans   &trans &trans    &trans
-                &kp SQT     &kp N4 &kp N5 &kp N6 &kp KP_EQUAL          &trans    &trans   &trans &trans    &trans
-                &caps_word  &kp N1 &kp N2 &kp N3 &kp BSLH              &trans    &trans   &trans &trans    &trans
-                                         &kp N0 &kp KP_MINUS           &trans    &trans
+                &kp GRAVE      &kp N7      &kp N8       &kp N9     &kp ESC                 &trans      &trans     &trans     &trans    &trans
+                &kp SQT        &kp N4      &kp N5       &kp N6     &kp KP_EQUAL            &trans      &trans     &trans     &trans    &trans
+                &caps_word     &kp N1      &kp N2       &kp N3     &kp BSLH                &trans      &trans     &trans     &trans    &trans
+                                                        &kp N0     &kp KP_MINUS            &trans      &trans
                 >;
        };
 
        sym_layer {
             bindings = <
-                &kp TILDE  &kp AMPS &kp STAR  &kp LPAR  &kp ESC               &trans    &trans        &trans &trans    &trans
-                &kp DQT    &kp DLLR &kp PRCNT &kp CARET &kp KP_PLUS           &trans    &trans        &trans &trans    &trans
-                &caps_word  &kp EXCL &kp AT    &kp HASH  &kp PIPE             &reset    &bootloader   &trans &trans    &trans
-                                              &kp RPAR  &kp UNDER             &trans    &trans
+                &kp TILDE     &kp AMPS     &kp STAR      &kp LPAR     &kp ESC              &trans      &trans        &trans  &trans    &trans
+                &kp DQT       &kp DLLR     &kp PRCNT     &kp CARET    &kp KP_PLUS          &trans      &trans        &trans  &trans    &trans
+                &caps_word    &kp EXCL     &kp A T       &kp HASH     &kp PIPE             &reset      &bootloader   &trans  &trans    &trans
+                                                         &kp RPAR     &kp UNDER            &trans      &trans
                 >;
         };
     };
