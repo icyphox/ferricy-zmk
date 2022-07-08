@@ -19,6 +19,7 @@
 #define vu C_VOL_UP
 #define vd C_VOL_DN
 
+#include "combos.dtsi"
 
 &mt {
   flavor = "tap-preferred";
