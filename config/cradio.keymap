@@ -85,7 +85,7 @@
             bindings = <
                 &kp TILDE     &kp AMPS     &kp STAR      &kp LPAR     &kp ESC              &trans      &trans        &trans  &trans    &trans
                 &kp DQT       &kp DLLR     &kp PRCNT     &kp CARET    &kp KP_PLUS          &trans      &trans        &trans  &trans    &trans
-                &caps_word    &kp EXCL     &kp A T       &kp HASH     &kp PIPE             &reset      &bootloader   &trans  &trans    &trans
+                &caps_word    &kp EXCL     &kp AT        &kp HASH     &kp PIPE             &reset      &bootloader   &trans  &trans    &trans
                                                          &kp RPAR     &kp UNDER            &trans      &trans
                 >;
         };
