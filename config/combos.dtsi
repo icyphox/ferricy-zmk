@@ -1,10 +1,13 @@
+#define COMBO(NAME, BINDINGS, KEYPOS, MS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    timeout-ms = <MS>; \
+  };
+
 / {
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
+        COMBO(esc, &kp ESC, 0 1, 50)
     };
 };
