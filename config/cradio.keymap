@@ -14,11 +14,6 @@
 #define NUM 2
 #define SYM 3
 
-#define bu C_BRI_UP
-#define bd C_BRI_DN
-#define vu C_VOL_UP
-#define vd C_VOL_DN
-
 &mt {
   flavor = "tap-preferred";
   tapping_term_ms = <165>;
@@ -27,7 +22,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_caps_word {
+        combo_esc {
             timeout-ms = <100>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
@@ -71,10 +66,10 @@
 
         nav_layer {
             bindings = <
-                &kp vd     &kp vu      &trans        &trans       &trans                   &trans      &kp LBRC   &kp RBRC   &kp LPAR    &kp RPAR
-                &kp bd     &kp bu      &trans        &trans       &trans                   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &sqt_dqt
-                &trans     &trans      &bootloader   &reset       &trans                   &trans      &kp LBKT   &kp RBKT   &trans      &trans
-                                                     &trans       &trans                   &kp ESC     &trans
+                &kp C_VOL_DN   &kp C_VOL_UP   &trans        &trans       &trans            &trans      &kp LBRC   &kp RBRC   &kp LPAR    &kp RPAR
+                &kp C_BRI_DN   &kp C_BRI_UP   &trans        &trans       &trans            &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &sqt_dqt
+                &trans         &trans         &bootloader   &reset       &trans            &trans      &kp LBKT   &kp RBKT   &trans      &trans
+                                                            &trans       &trans            &kp ESC     &trans
                 >;
         };
 
