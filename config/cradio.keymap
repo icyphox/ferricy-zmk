@@ -19,14 +19,20 @@
 #define vu C_VOL_UP
 #define vd C_VOL_DN
 
-#include "combos.dtsi"
-
 &mt {
   flavor = "tap-preferred";
   tapping_term_ms = <165>;
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_caps_word {
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
 
     behaviors {
         sqt_dqt: tap_dance_0 {
