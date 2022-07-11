@@ -67,7 +67,7 @@
                 &kp Q        &kp D         &kp R        &kp W        &kp B                 &kp J        &kp F        &kp U           &kp P          &kp SCLN
                 &mt LCTRL A  &mt LSHIFT S  &mt LALT H   &mt LGUI T   &kp G                 &kp Y        &mt RGUI N   &mt RALT E      &mt RSHIFT O   &mt RCTRL I
                 &kp Z        &kp X         &kp M        &kp C        &kp V                 &kp K        &kp L        &kp CMMA        &kp DOT        &kp FSLH
-                                                    &lt TAB UC   &lt NAV SPC                 &lt SYM RET  &lt NUM BSPC
+                                                    &lt UC TAB   &lt NAV SPC                 &lt SYM RET  &lt NUM BSPC
             >;
         };
 
