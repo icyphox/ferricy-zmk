@@ -13,6 +13,8 @@
 #define NUM 2
 #define SYM 3
 
+#include "unicode.dtsi"
+
 &mt {
   flavor = "tap-preferred";
   tapping_term_ms = <165>;
@@ -67,7 +69,7 @@
             bindings = <
                 &kp C_VOL_DN   &kp C_VOL_UP   &trans        &trans       &trans            &trans      &kp LBRC   &kp RBRC   &kp LPAR    &kp RPAR
                 &kp C_BRI_DN   &kp C_BRI_UP   &trans        &trans       &trans            &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &sqt_dqt
-                &trans         &trans         &bootloader   &reset       &trans            &trans      &kp LBKT   &kp RBKT   &trans      &trans
+                &trans         &trans         &trans        &bootloader  &reset            &trans      &kp LBKT   &kp RBKT   &trans      &trans
                                                             &trans       &trans            &kp ESC     &trans
                 >;
         };
