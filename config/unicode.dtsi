@@ -22,7 +22,6 @@
             #binding-cells = <0>; \
             bindings = <BINDING>, <SHIFTED_BINDING>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         }; \
     };
 
