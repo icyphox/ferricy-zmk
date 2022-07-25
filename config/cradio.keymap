@@ -42,12 +42,18 @@
             tapping-term-ms = <165>;
             bindings = <&kp SQT>, <&kp DQT>;
         };
+    };
+
+    macros {
         uc_dash: uc_dash {
-            compatible = "zmk,behavior-macro";
-            label = "UC_DASH";
+            label = "UNICODE_DASH";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(U))>, <&kp N2>, <&kp N0>, <&kp N1>, <&kp N4>, <&kp SPACE>;
-        };
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp N2 &kp N0 &kp N1 &kp N4>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                ;
+        }; 
     };
 
     keymap {
@@ -93,7 +99,7 @@
                 &trans      &trans     &trans     &trans    &trans                         &trans      &trans     &trans     &trans    &uc_dash
                 &trans      &trans     &trans     &trans    &trans                         &trans      &trans     &trans     &trans    &trans
                 &trans      &trans     &trans     &trans    &trans                         &trans      &trans     &trans     &trans    &trans
-                                                &trans      &trans                         &trans      &trans
+                                                  &trans    &trans                         &trans      &trans
             >;
         };
     };
