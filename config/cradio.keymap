@@ -47,6 +47,7 @@
     macros {
         uc_dash: uc_dash {
             label = "UNICODE_DASH";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL &kp LSHFT>
