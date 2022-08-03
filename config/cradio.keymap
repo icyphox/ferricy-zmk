@@ -40,12 +40,12 @@
             bindings = <&kp EQL>;
         };
         combo_sqt {
-            timeout-ms = <100>;
+            timeout-ms = <20>;
             key-positions = <18 19>;
             bindings = <&kp SQT>;
         };
         combo_hyphen {
-            timeout-ms = <100>;
+            timeout-ms = <20>;
             key-positions = <16 17>;
             bindings = <&kp MINUS>;
         };
