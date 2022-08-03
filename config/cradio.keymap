@@ -47,7 +47,7 @@
         combo_hyphen {
             timeout-ms = <100>;
             key-positions = <16 17>;
-            bindings = <&kp SQT>;
+            bindings = <&kp MINUS>;
         };
     };
 
