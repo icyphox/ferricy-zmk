@@ -20,6 +20,13 @@
 };
 
 / {
+    /*
+        0  1  2  3  4       5  6  7  8  9
+        10 11 12 13 14      15 16 17 18 19
+        20 21 22 23 24      25 26 27 28 29
+                 30 31      32 33
+
+    */
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -32,15 +39,15 @@
             key-positions = <8 9>;
             bindings = <&kp EQL>;
         };
-    };
-
-    behaviors {
-        sqt_dqt: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <165>;
-            bindings = <&kp SQT>, <&kp DQT>;
+        combo_sqt {
+            timeout-ms = <100>;
+            key-positions = <18 19>;
+            bindings = <&kp SQT>;
+        };
+        combo_hyphen {
+            timeout-ms = <100>;
+            key-positions = <16 17>;
+            bindings = <&kp SQT>;
         };
     };
 
@@ -74,7 +81,7 @@
         nav_layer {
             bindings = <
                 &kp C_VOL_DN   &kp C_VOL_UP   &trans        &trans       &trans            &trans      &kp LBRC   &kp RBRC   &kp LPAR    &kp RPAR
-                &kp C_BRI_DN   &kp C_BRI_UP   &trans        &trans       &trans            &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &sqt_dqt
+                &kp C_BRI_DN   &kp C_BRI_UP   &trans        &trans       &trans            &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &trans
                 &trans         &trans         &trans        &bootloader  &reset            &trans      &kp LBKT   &kp RBKT   &trans      &trans
                                                             &trans       &trans            &kp ESC     &trans
             >;
@@ -85,7 +92,7 @@
                 &kp GRAVE      &kp N7      &kp N8       &kp N9     &kp ESC                 &trans      &trans     &trans     &trans    &trans
                 &kp SQT        &kp N4      &kp N5       &kp N6     &kp KP_EQUAL            &trans      &trans     &trans     &trans    &trans
                 &caps_word     &kp N1      &kp N2       &kp N3     &kp BSLH                &trans      &trans     &trans     &trans    &trans
-                                                        &kp N0     &kp KP_MINUS            &trans      &trans
+                                                        &kp N0     &trans                  &trans      &trans
             >;
         };
 
@@ -94,7 +101,7 @@
                 &kp TILDE     &kp AMPS     &kp STAR      &kp LPAR     &kp ESC              &trans      &trans        &trans  &trans    &trans
                 &kp DQT       &kp DLLR     &kp PRCNT     &kp CARET    &kp KP_PLUS          &trans      &trans        &trans  &trans    &trans
                 &caps_word    &kp EXCL     &kp AT        &kp HASH     &kp PIPE             &reset      &bootloader   &trans  &trans    &trans
-                                                         &kp RPAR     &kp UNDER            &trans      &trans
+                                                         &kp RPAR     &trans               &trans      &trans
             >;
         };
 
