@@ -40,8 +40,8 @@
             bindings = <&kp EQL>;
         };
         combo_sqt {
-            timeout-ms = <7>;
-            key-positions = <16 17>;
+            timeout-ms = <20>;
+            key-positions = <7 8>;
             bindings = <&kp SQT>;
         };
         combo_hyphen {
