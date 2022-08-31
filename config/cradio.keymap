@@ -64,7 +64,7 @@
                 , <&macro_release &kp LCTRL &kp LSHFT>
                 , <&macro_tap &kp N2 &kp N0 &kp N1 &kp N4 &kp SPC>
                 ;
-        }; 
+        };
     };
 
     keymap {
@@ -82,7 +82,7 @@
             bindings = <
                 &kp C_VOL_DN   &kp C_VOL_UP   &trans        &trans       &trans            &trans      &kp LBRC   &kp RBRC   &kp LPAR    &kp RPAR
                 &kp C_BRI_DN   &kp C_BRI_UP   &trans        &trans       &trans            &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &trans
-                &trans         &trans         &trans        &bootloader  &reset            &trans      &kp LBKT   &kp RBKT   &trans      &trans
+                &bt BT_CLR     &trans         &trans        &bootloader  &reset            &trans      &kp LBKT   &kp RBKT   &trans      &trans
                                                             &trans       &trans            &kp ESC     &trans
             >;
         };
@@ -100,7 +100,7 @@
             bindings = <
                 &kp TILDE     &kp AMPS     &kp STAR      &kp LPAR     &kp ESC              &trans      &trans        &trans  &trans    &trans
                 &kp DQT       &kp DLLR     &kp PRCNT     &kp CARET    &kp KP_PLUS          &trans      &trans        &trans  &trans    &trans
-                &caps_word    &kp EXCL     &kp AT        &kp HASH     &kp PIPE             &reset      &bootloader   &trans  &trans    &trans
+                &caps_word    &kp EXCL     &kp AT        &kp HASH     &kp PIPE             &reset      &bootloader   &trans  &trans    &bt BT_CLR
                                                          &kp RPAR     &trans               &trans      &trans
             >;
         };
