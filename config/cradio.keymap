@@ -13,6 +13,7 @@
 #define NUM 2
 #define SYM 3
 #define UC 4
+#define QWERTY 5
 
 &mt {
     flavor = "tap-preferred";
@@ -48,6 +49,11 @@
             timeout-ms = <20>;
             key-positions = <6 7>;
             bindings = <&kp MINUS>;
+        };
+        combo_qwerty {
+            timeout-ms = <30>;
+            key-positions = <9 19 29>;
+            bindings = <&tog QWERTY>;
         };
     };
 
@@ -111,6 +117,15 @@
                 &trans      &trans     &trans     &trans    &trans                         &trans      &trans     &trans     &trans    &trans
                 &trans      &trans     &trans     &trans    &trans                         &trans      &trans     &trans     &trans    &trans
                                                   &trans    &trans                         &trans      &trans
+            >;
+        };
+
+        qwerty_layer {
+            bindings = <
+                &kp Q       &kp W      &kp E      &kp R     &kp T                          &kp Y     &kp U    &kp I    &kp O     &kp P
+                &kp A       &kp S      &kp D      &kp F     &kp G                          &kp H     &kp J    &kp K    &kp L     &kp SCLN
+                &kp Z       &kp X      &kp C      &kp V     &kp B                          &kp N     &kp M    &kp CMMA &kp DOT   &kp FSLH
+                                                  &kp TAB   &kp SPC                        &kp RET   &kp BSPC
             >;
         };
     };
