@@ -51,7 +51,7 @@
             bindings = <&kp MINUS>;
         };
         combo_qwerty {
-            timeout-ms = <30>;
+            timeout-ms = <100>;
             key-positions = <9 19 29>;
             bindings = <&tog QWERTY>;
         };
