@@ -55,6 +55,11 @@
             key-positions = <9 19 29>;
             bindings = <&tog QWERTY>;
         };
+        combo_b {
+            timeout-ms = <100>;
+            key-positions = <2 3>;
+            bindings = <&kp B>;
+        };
     };
 
     macros {
@@ -77,7 +82,7 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp Q        &kp D         &kp R        &kp W        &kp B                 &kp J        &kp F        &kp U           &kp P          &kp SCLN
+                &kp Q        &kp D         &kp R        &kp W        &kp B                &kp J        &kp F        &kp U           &kp P          &kp SCLN
                 &mt LCTRL A  &mt LSHIFT S  &mt LALT H   &mt LGUI T   &kp G                 &kp Y        &mt RGUI N   &mt RALT E      &mt RSHIFT O   &mt RCTRL I
                 &kp Z        &kp X         &kp M        &kp C        &kp V                 &kp K        &kp L        &kp CMMA        &kp DOT        &kp FSLH
                                                     &lt UC TAB   &lt NAV SPC               &lt SYM RET  &lt NUM BSPC
